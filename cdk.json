@@ -1,0 +1,111 @@
+{
+  "app": "python3 app.py",
+  "watch": {
+    "include": [
+      "**"
+    ],
+    "exclude": [
+      "README.md",
+      "cdk*.json",
+      "requirements*.txt",
+      "source.bat",
+      "**/__init__.py",
+      "python/__pycache__",
+      "tests"
+    ]
+  },
+  "context": {
+    "@aws-cdk/aws-apigateway:usagePlanKeyOrderInsensitiveId": true,
+    "@aws-cdk/core:stackRelativeExports": true,
+    "@aws-cdk/aws-rds:lowercaseDbIdentifier": true,
+    "@aws-cdk/aws-lambda:recognizeVersionProps": true,
+    "@aws-cdk/aws-cloudfront:defaultSecurityPolicyTLSv1.2_2021": true,
+    "@aws-cdk-containers/ecs-service-extensions:enableDefaultLogDriver": true,
+    "@aws-cdk/aws-ec2:uniqueImdsv2TemplateName": true,
+    "@aws-cdk/aws-iam:minimizePolicies": true,
+    "@aws-cdk/core:target-partitions": [
+      "aws",
+      "aws-cn"
+    ],
+    "shared_values": {
+      "dev": {
+        "branch": "develop",
+        "prefix": "dev",
+        "rds_host_moodle": "ubits-dev-3dot10-bigbang-db-rds-aurora-v2.cowvbobtzldr.us-east-1.rds.amazonaws.com",
+        "db_user_moodle": "user_opensearch",
+        "db_pass_moodle": "E6a8oqZUCEiGDZ8M",
+        "db_name_moodle": "bitnami_moodle",
+        "db_port_moodle": "3306",
+        "username_opensearch": "UbitsAdmin",
+        "password_opensearch": "$5tv]lk}}u>>I{V4YZM}",
+        "endpoint_opensearch": "https://search-catalogo-rfzti4xziko7sf3mzcjlb4nobq.us-east-1.es.amazonaws.com",
+        "index_opensearch": "cursos",
+        "bucket_name": "ubits-dev-databases",
+        "layer_name_db": "ubits-database-layers",
+        "layer_arn_db": "arn:aws:lambda:us-east-1:824404647578:layer:ubits-database-layers:3",
+        "lambda_role_name": "ubits-dev-lambda-role",
+        "rol_lambda_id": "arn:aws:iam::824404647578:role/ubits-dev-lambda-role",
+        "vpc_id": "vpc-018a67ed2f2b7cccc",
+        "vpc_name": "ubits-dev-vpc",
+        "subnet1": "ubits-dev-subnet_app-0",
+        "subnet2": "ubits-dev-subnet_app-1",
+        "subnet1_id": "subnet-0df2943ef4a15fcd8",
+        "subnet2_id": "subnet-0a2901b9df6b6846f",
+        "sg_name": "ubits-dev-data-sg",
+        "sg_id": "sg-0454ac4ede442fc55"
+      },
+    "test": {
+        "branch": "staging",
+        "prefix": "test",
+        "rds_host_moodle": "lms-read.rds.test.sandteck.com",
+        "db_user_moodle": "user_opensearch",
+        "db_pass_moodle": "E6a8oqZUCEiGDZ8M",
+        "db_name_moodle": "bitnami_moodle",
+        "db_port_moodle": "3036",
+        "username_opensearch": "UbitsAdmin",
+        "password_opensearch": "$5tv]lk}}u>>I{V4YZM}",
+        "endpoint_opensearch": "https://search-catalogo-wetk6o5lynpwryd6j5s7si5zhu.us-east-1.es.amazonaws.com",
+        "index_opensearch": "cursos",
+        "bucket_name": "ubits-test-databases",
+        "layer_name_db": "ubits-database-layers",
+        "layer_arn_db": "arn:aws:lambda:us-east-1:180456184118:layer:ubits-database-layers:6",
+        "lambda_role_name": "ubits-test-lambda-role",
+        "rol_lambda_id": "arn:aws:iam::180456184118:role/ubits-test-lambda-role",
+        "vpc_id": "vpc-0d8725da655b46592",
+        "vpc_name": "ubits-test-vpc",
+        "subnet1": "ubits-test-subnet_app-0",
+        "subnet2": "ubits-test-subnet_app-1",
+        "subnet1_id": "subnet-0dd29501435396be5",
+        "subnet2_id": "subnet-0f08325dd87653ab0",
+        "sg_name": "ubits-test-data-sg",
+        "sg_id": "sg-0020c1248390cd74c"
+      },
+    "prod": {
+        "branch": "master",
+        "prefix": "prod",
+        "rds_host_moodle": "lms-read.rds.ubitslearning.com",
+        "db_user_moodle": "user_opensearch",
+        "db_pass_moodle": "E6a8oqZUCEiGDZ8M",
+        "db_name_moodle": "bitnami_moodle",
+        "db_port_moodle": "3036",
+        "username_opensearch": "UbitsAdmin",
+        "password_opensearch": "$5tv]lk}}u>>I{V4YZM}",
+        "endpoint_opensearch": "https://search-catalogo-jbccxtqoorbl2ft4voj46wpnue.us-east-1.es.amazonaws.com",
+        "index_opensearch": "cursos",
+        "bucket_name": "ubits-prod-databases",
+        "layer_name_db": "ubits-database-layers",
+        "layer_arn_db": "arn:aws:lambda:us-east-1:986361039434:layer:ubits-database-layers:2",
+        "lambda_role_name": "ubits-prod-lambda-role",
+        "rol_lambda_id": "arn:aws:iam::986361039434:role/ubits-prod-lambda-role",
+        "vpc_id": "vpc-00b37952258c43972",
+        "vpc_name": "ubits-prod-vpc",
+        "subnet1": "ubits-prod-subnet_app-0",
+        "subnet2": "ubits-prod-subnet_app-1",
+        "subnet1_id": "subnet-0c0c6f22eddeb11c7",
+        "subnet2_id": "subnet-040bd058f70d2ca42",
+        "sg_name": "ubits-prod-data-sg",
+        "sg_id": "sg-0c54f9efbf865c27f"
+      }
+    }
+  }
+}

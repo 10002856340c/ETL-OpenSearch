@@ -1,0 +1,346 @@
+{
+  "version": "tree-0.1",
+  "tree": {
+    "id": "App",
+    "path": "",
+    "children": {
+      "Tree": {
+        "id": "Tree",
+        "path": "Tree",
+        "constructInfo": {
+          "fqn": "constructs.Construct",
+          "version": "10.1.42"
+        }
+      },
+      "Default": {
+        "id": "Default",
+        "path": "Default",
+        "children": {
+          "PowerBI_Analytics": {
+            "id": "PowerBI_Analytics",
+            "path": "Default/PowerBI_Analytics",
+            "constructInfo": {
+              "fqn": "aws-cdk-lib.Resource",
+              "version": "2.19.0"
+            }
+          },
+          "ubits-test-lambda-role": {
+            "id": "ubits-test-lambda-role",
+            "path": "Default/ubits-test-lambda-role",
+            "constructInfo": {
+              "fqn": "aws-cdk-lib.Resource",
+              "version": "2.19.0"
+            }
+          },
+          "ubits-test-vpc": {
+            "id": "ubits-test-vpc",
+            "path": "Default/ubits-test-vpc",
+            "children": {
+              "PublicSubnet1": {
+                "id": "PublicSubnet1",
+                "path": "Default/ubits-test-vpc/PublicSubnet1",
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.Resource",
+                  "version": "2.19.0"
+                }
+              },
+              "PublicSubnet2": {
+                "id": "PublicSubnet2",
+                "path": "Default/ubits-test-vpc/PublicSubnet2",
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.Resource",
+                  "version": "2.19.0"
+                }
+              },
+              "PrivateSubnet1": {
+                "id": "PrivateSubnet1",
+                "path": "Default/ubits-test-vpc/PrivateSubnet1",
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.Resource",
+                  "version": "2.19.0"
+                }
+              },
+              "PrivateSubnet2": {
+                "id": "PrivateSubnet2",
+                "path": "Default/ubits-test-vpc/PrivateSubnet2",
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.Resource",
+                  "version": "2.19.0"
+                }
+              },
+              "PrivateSubnet3": {
+                "id": "PrivateSubnet3",
+                "path": "Default/ubits-test-vpc/PrivateSubnet3",
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.Resource",
+                  "version": "2.19.0"
+                }
+              },
+              "PrivateSubnet4": {
+                "id": "PrivateSubnet4",
+                "path": "Default/ubits-test-vpc/PrivateSubnet4",
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.Resource",
+                  "version": "2.19.0"
+                }
+              },
+              "PrivateSubnet5": {
+                "id": "PrivateSubnet5",
+                "path": "Default/ubits-test-vpc/PrivateSubnet5",
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.Resource",
+                  "version": "2.19.0"
+                }
+              },
+              "PrivateSubnet6": {
+                "id": "PrivateSubnet6",
+                "path": "Default/ubits-test-vpc/PrivateSubnet6",
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.Resource",
+                  "version": "2.19.0"
+                }
+              },
+              "PrivateSubnet7": {
+                "id": "PrivateSubnet7",
+                "path": "Default/ubits-test-vpc/PrivateSubnet7",
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.Resource",
+                  "version": "2.19.0"
+                }
+              },
+              "PrivateSubnet8": {
+                "id": "PrivateSubnet8",
+                "path": "Default/ubits-test-vpc/PrivateSubnet8",
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.Resource",
+                  "version": "2.19.0"
+                }
+              }
+            },
+            "constructInfo": {
+              "fqn": "aws-cdk-lib.Resource",
+              "version": "2.19.0"
+            }
+          },
+          "ubits-test-subnet_data-0": {
+            "id": "ubits-test-subnet_data-0",
+            "path": "Default/ubits-test-subnet_data-0",
+            "constructInfo": {
+              "fqn": "aws-cdk-lib.Resource",
+              "version": "2.19.0"
+            }
+          },
+          "ubits-test-subnet_data-1": {
+            "id": "ubits-test-subnet_data-1",
+            "path": "Default/ubits-test-subnet_data-1",
+            "constructInfo": {
+              "fqn": "aws-cdk-lib.Resource",
+              "version": "2.19.0"
+            }
+          },
+          "ubits-test-data-sg": {
+            "id": "ubits-test-data-sg",
+            "path": "Default/ubits-test-data-sg",
+            "constructInfo": {
+              "fqn": "aws-cdk-lib.Resource",
+              "version": "2.19.0"
+            }
+          },
+          "WorkplaceIntegrationStack": {
+            "id": "WorkplaceIntegrationStack",
+            "path": "Default/WorkplaceIntegrationStack",
+            "children": {
+              "Code": {
+                "id": "Code",
+                "path": "Default/WorkplaceIntegrationStack/Code",
+                "children": {
+                  "Stage": {
+                    "id": "Stage",
+                    "path": "Default/WorkplaceIntegrationStack/Code/Stage",
+                    "constructInfo": {
+                      "fqn": "aws-cdk-lib.AssetStaging",
+                      "version": "2.19.0"
+                    }
+                  },
+                  "AssetBucket": {
+                    "id": "AssetBucket",
+                    "path": "Default/WorkplaceIntegrationStack/Code/AssetBucket",
+                    "constructInfo": {
+                      "fqn": "aws-cdk-lib.aws_s3.BucketBase",
+                      "version": "2.19.0"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.aws_s3_assets.Asset",
+                  "version": "2.19.0"
+                }
+              },
+              "Resource": {
+                "id": "Resource",
+                "path": "Default/WorkplaceIntegrationStack/Resource",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::Lambda::Function",
+                  "aws:cdk:cloudformation:props": {
+                    "code": {
+                      "s3Bucket": "cdk-hnb659fds-assets-180456184118-us-east-1",
+                      "s3Key": "ef668217bbe2c8e99a3c10c625917fddddeebf65356ad81d32c1dba251fcd398.zip"
+                    },
+                    "role": "arn:aws:iam::180456184118:role/ubits-test-lambda-role",
+                    "environment": {
+                      "variables": {
+                        "branch": "staging",
+                        "prefix": "test",
+                        "token": "DQVJ1LUZAiTnEzWTQ4R0EzcS1jRnNOQjZAwVFVuUVJJd21hUzNhYzhlREdkNlJsR29GT2lOQUhQd0dnNlhwc0VueXNfV092T19vcm5zZAkRuZAWpfc3NnYXNUd1UtQ3dxN1JMek5YeHhtQnJsUlY1Q05VS0diNlNZAZAWdzNHpncDZAxOGtGMzRtcWtoMUhxazdPZAy1FLUxzTEhiMU9WZAWNESzBiYi1rYlNqT3BlVlpPc0NhTmRFeUNHTTd5VXd0N1l4bFFuajFiSUlR%0A",
+                        "id_tech": "284719169503437",
+                        "limit": "20000",
+                        "fields": "id,first_name,last_name,name,title,email,department",
+                        "rds_host_moodle_plug": "ubits-test-uplug-mariadb.cjqpovg6bsbu.us-east-1.rds.amazonaws.com",
+                        "rds_host_moodle_adminhr": "ubits-test-adminhr.cjqpovg6bsbu.us-east-1.rds.amazonaws.com",
+                        "rds_host_moodle_learning": "ubits-test-xlearning-writer.cjqpovg6bsbu.us-east-1.rds.amazonaws.com",
+                        "db_user_moodle": "ubits_workplace",
+                        "db_pass_moodle": "D7M49vMYijeN",
+                        "db_name_moodle_plug": "bitnami_uplug",
+                        "db_name_moodle_adminhr": "adminhr",
+                        "db_name_moodle_learning": "bitnami_moodle",
+                        "db_port_moodle_plug": "3306",
+                        "db_port_moodle_adminhr": "3306",
+                        "db_port_moodle_learning": "3036",
+                        "bucket_name": "ubits-test-databases",
+                        "file_name": "RolesTest.csv",
+                        "layer_name": "PowerBI_Analytics",
+                        "layer_arn": "arn:aws:lambda:us-east-1:180456184118:layer:PowerBI_Analytics:1",
+                        "lambda_role_name": "ubits-test-lambda-role",
+                        "rol_lambda_id": "arn:aws:iam::180456184118:role/ubits-test-lambda-role",
+                        "vpc_id": "vpc-0d8725da655b46592",
+                        "vpc_name": "ubits-test-vpc",
+                        "subnet1_name": "ubits-test-subnet_data-0",
+                        "subnet2_name": "ubits-test-subnet_data-1",
+                        "subnet1_id": "subnet-056aeddbc5dbc2534",
+                        "subnet2_id": "subnet-0b9dfce5ce5bb6a17",
+                        "sg_name": "ubits-test-data-sg",
+                        "sg_id": "sg-0020c1248390cd74c"
+                      }
+                    },
+                    "handler": "users.apiWorkplace",
+                    "layers": [
+                      "arn:aws:lambda:us-east-1:180456184118:layer:PowerBI_Analytics:1"
+                    ],
+                    "runtime": "python3.8",
+                    "timeout": 300,
+                    "vpcConfig": {
+                      "subnetIds": [
+                        "subnet-056aeddbc5dbc2534",
+                        "subnet-0b9dfce5ce5bb6a17"
+                      ],
+                      "securityGroupIds": [
+                        "sg-0020c1248390cd74c"
+                      ]
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.aws_lambda.CfnFunction",
+                  "version": "2.19.0"
+                }
+              }
+            },
+            "constructInfo": {
+              "fqn": "aws-cdk-lib.aws_lambda.Function",
+              "version": "2.19.0"
+            }
+          },
+          "Rule": {
+            "id": "Rule",
+            "path": "Default/Rule",
+            "children": {
+              "Resource": {
+                "id": "Resource",
+                "path": "Default/Rule/Resource",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::Events::Rule",
+                  "aws:cdk:cloudformation:props": {
+                    "scheduleExpression": "cron(30 13 ? * MON-FRI *)",
+                    "state": "ENABLED",
+                    "targets": [
+                      {
+                        "id": "Target0",
+                        "arn": {
+                          "Fn::GetAtt": [
+                            "WorkplaceIntegrationStack8B38D959",
+                            "Arn"
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.aws_events.CfnRule",
+                  "version": "2.19.0"
+                }
+              },
+              "AllowEventRuleWorkplaceIntegrationStack": {
+                "id": "AllowEventRuleWorkplaceIntegrationStack",
+                "path": "Default/Rule/AllowEventRuleWorkplaceIntegrationStack",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::Lambda::Permission",
+                  "aws:cdk:cloudformation:props": {
+                    "action": "lambda:InvokeFunction",
+                    "functionName": {
+                      "Fn::GetAtt": [
+                        "WorkplaceIntegrationStack8B38D959",
+                        "Arn"
+                      ]
+                    },
+                    "principal": "events.amazonaws.com",
+                    "sourceArn": {
+                      "Fn::GetAtt": [
+                        "Rule4C995B7F",
+                        "Arn"
+                      ]
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.aws_lambda.CfnPermission",
+                  "version": "2.19.0"
+                }
+              }
+            },
+            "constructInfo": {
+              "fqn": "aws-cdk-lib.aws_events.Rule",
+              "version": "2.19.0"
+            }
+          },
+          "CDKMetadata": {
+            "id": "CDKMetadata",
+            "path": "Default/CDKMetadata",
+            "children": {
+              "Default": {
+                "id": "Default",
+                "path": "Default/CDKMetadata/Default",
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.CfnResource",
+                  "version": "2.19.0"
+                }
+              }
+            },
+            "constructInfo": {
+              "fqn": "constructs.Construct",
+              "version": "10.1.42"
+            }
+          }
+        },
+        "constructInfo": {
+          "fqn": "aws-cdk-lib.Stack",
+          "version": "2.19.0"
+        }
+      }
+    },
+    "constructInfo": {
+      "fqn": "aws-cdk-lib.App",
+      "version": "2.19.0"
+    }
+  }
+}

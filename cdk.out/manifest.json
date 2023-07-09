@@ -1,0 +1,126 @@
+{
+  "version": "16.0.0",
+  "artifacts": {
+    "Tree": {
+      "type": "cdk:tree",
+      "properties": {
+        "file": "tree.json"
+      }
+    },
+    "Default.assets": {
+      "type": "cdk:asset-manifest",
+      "properties": {
+        "file": "Default.assets.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+      }
+    },
+    "Default": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://180456184118/us-east-1",
+      "properties": {
+        "templateFile": "Default.template.json",
+        "validateOnSynth": false,
+        "assumeRoleArn": "arn:${AWS::Partition}:iam::180456184118:role/cdk-hnb659fds-deploy-role-180456184118-us-east-1",
+        "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::180456184118:role/cdk-hnb659fds-cfn-exec-role-180456184118-us-east-1",
+        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-180456184118-us-east-1/371f295caeb52e2b22efe70c676ec6c22b015734939e10ce8d9fcc891b185db1.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version",
+        "additionalDependencies": [
+          "Default.assets"
+        ],
+        "lookupRole": {
+          "arn": "arn:${AWS::Partition}:iam::180456184118:role/cdk-hnb659fds-lookup-role-180456184118-us-east-1",
+          "requiresBootstrapStackVersion": 8,
+          "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+        }
+      },
+      "dependencies": [
+        "Default.assets"
+      ],
+      "metadata": {
+        "/Default/ubits-test-subnet_data-0": [
+          {
+            "type": "aws:cdk:warning",
+            "data": "No routeTableId was provided to the subnet 'subnet-056aeddbc5dbc2534'. Attempting to read its .routeTable.routeTableId will return null/undefined. (More info: https://github.com/aws/aws-cdk/pull/3171)",
+            "trace": [
+              "Annotations.addMessage (/tmp/jsii-kernel-lfjYjP/node_modules/aws-cdk-lib/core/lib/annotations.js:1:1213)",
+              "Annotations.addWarning (/tmp/jsii-kernel-lfjYjP/node_modules/aws-cdk-lib/core/lib/annotations.js:1:600)",
+              "new ImportedSubnet (/tmp/jsii-kernel-lfjYjP/node_modules/aws-cdk-lib/aws-ec2/lib/vpc.js:1:24992)",
+              "Function.fromSubnetAttributes (/tmp/jsii-kernel-lfjYjP/node_modules/aws-cdk-lib/aws-ec2/lib/vpc.js:1:16943)",
+              "Function.fromSubnetId (/tmp/jsii-kernel-lfjYjP/node_modules/aws-cdk-lib/aws-ec2/lib/vpc.js:1:17029)",
+              "/tmp/tmpj46w7cdp/lib/program.js:8013:114",
+              "Kernel._wrapSandboxCode (/tmp/tmpj46w7cdp/lib/program.js:8592:24)",
+              "/tmp/tmpj46w7cdp/lib/program.js:8013:87",
+              "Kernel._ensureSync (/tmp/tmpj46w7cdp/lib/program.js:8573:28)",
+              "Kernel.sinvoke (/tmp/tmpj46w7cdp/lib/program.js:8013:34)",
+              "KernelHost.processRequest (/tmp/tmpj46w7cdp/lib/program.js:9506:36)",
+              "KernelHost.run (/tmp/tmpj46w7cdp/lib/program.js:9469:22)",
+              "Immediate._onImmediate (/tmp/tmpj46w7cdp/lib/program.js:9470:46)",
+              "processImmediate (node:internal/timers:466:21)"
+            ]
+          }
+        ],
+        "/Default/ubits-test-subnet_data-1": [
+          {
+            "type": "aws:cdk:warning",
+            "data": "No routeTableId was provided to the subnet 'subnet-0b9dfce5ce5bb6a17'. Attempting to read its .routeTable.routeTableId will return null/undefined. (More info: https://github.com/aws/aws-cdk/pull/3171)",
+            "trace": [
+              "Annotations.addMessage (/tmp/jsii-kernel-lfjYjP/node_modules/aws-cdk-lib/core/lib/annotations.js:1:1213)",
+              "Annotations.addWarning (/tmp/jsii-kernel-lfjYjP/node_modules/aws-cdk-lib/core/lib/annotations.js:1:600)",
+              "new ImportedSubnet (/tmp/jsii-kernel-lfjYjP/node_modules/aws-cdk-lib/aws-ec2/lib/vpc.js:1:24992)",
+              "Function.fromSubnetAttributes (/tmp/jsii-kernel-lfjYjP/node_modules/aws-cdk-lib/aws-ec2/lib/vpc.js:1:16943)",
+              "Function.fromSubnetId (/tmp/jsii-kernel-lfjYjP/node_modules/aws-cdk-lib/aws-ec2/lib/vpc.js:1:17029)",
+              "/tmp/tmpj46w7cdp/lib/program.js:8013:114",
+              "Kernel._wrapSandboxCode (/tmp/tmpj46w7cdp/lib/program.js:8592:24)",
+              "/tmp/tmpj46w7cdp/lib/program.js:8013:87",
+              "Kernel._ensureSync (/tmp/tmpj46w7cdp/lib/program.js:8573:28)",
+              "Kernel.sinvoke (/tmp/tmpj46w7cdp/lib/program.js:8013:34)",
+              "KernelHost.processRequest (/tmp/tmpj46w7cdp/lib/program.js:9506:36)",
+              "KernelHost.run (/tmp/tmpj46w7cdp/lib/program.js:9469:22)",
+              "Immediate._onImmediate (/tmp/tmpj46w7cdp/lib/program.js:9470:46)",
+              "processImmediate (node:internal/timers:466:21)"
+            ]
+          }
+        ],
+        "/Default/WorkplaceIntegrationStack/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "WorkplaceIntegrationStack8B38D959"
+          }
+        ],
+        "/Default/Rule/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "Rule4C995B7F"
+          }
+        ],
+        "/Default/Rule/AllowEventRuleWorkplaceIntegrationStack": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "RuleAllowEventRuleWorkplaceIntegrationStack9448F3FA"
+          }
+        ],
+        "/Default/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata"
+          }
+        ],
+        "/Default/BootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BootstrapVersion"
+          }
+        ],
+        "/Default/CheckBootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CheckBootstrapVersion"
+          }
+        ]
+      },
+      "displayName": "Default"
+    }
+  }
+}

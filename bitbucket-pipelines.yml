@@ -1,0 +1,69 @@
+image: node:16-alpine3.15
+
+definitions:
+  steps:
+    - step: &set-dev-env
+        name: Set Dev Environment
+        script:
+          - echo ENV=dev >> set_env.sh
+          - echo AWS_ACCESS_KEY_ID=${DEV_AWS_ACCESS_KEY_ID} >> set_env.sh
+          - echo AWS_SECRET_ACCESS_KEY=${DEV_AWS_SECRET_ACCESS_KEY} >> set_env.sh
+          - echo AWS_DEFAULT_REGION=${DEV_AWS_DEFAULT_REGION} >> set_env.sh
+          - echo CDK_ENVIRONMENT=dev >> set_env.sh
+          - echo CDK_STACK_NAME="OpenSearchEtlStack-dev" >> set_env.sh
+        artifacts:
+          - set_env.sh
+
+    - step: &set-test-env
+        name: Set Test Environment
+        script:
+          - echo ENV=test >> set_env.sh
+          - echo AWS_ACCESS_KEY_ID=${TEST_AWS_ACCESS_KEY_ID} >> set_env.sh
+          - echo AWS_SECRET_ACCESS_KEY=${TEST_AWS_SECRET_ACCESS_KEY} >> set_env.sh
+          - echo AWS_DEFAULT_REGION=${TEST_AWS_DEFAULT_REGION} >> set_env.sh
+          - echo CDK_ENVIRONMENT=test >> set_env.sh
+          - echo CDK_STACK_NAME="OpenSearchEtlStack-test" >> set_env.sh
+        artifacts:
+          - set_env.sh
+
+    - step: &set-prod-env
+        name: Set Prod Environment
+        script:
+          - echo ENV=prod >> set_env.sh
+          - echo AWS_ACCESS_KEY_ID=${PROD_AWS_ACCESS_KEY_ID} >> set_env.sh
+          - echo AWS_SECRET_ACCESS_KEY=${PROD_AWS_SECRET_ACCESS_KEY} >> set_env.sh
+          - echo AWS_DEFAULT_REGION=${PROD_AWS_DEFAULT_REGION} >> set_env.sh
+          - echo CDK_ENVIRONMENT=prod >> set_env.sh
+          - echo CDK_STACK_NAME="OpenSearchEtlStack-prod" >> set_env.sh
+        artifacts:
+          - set_env.sh
+
+    - step: &deploy
+        script:
+          - set -a
+          - source set_env.sh
+          - npm install --location=global aws-cdk
+          - apk add --no-cache python3 py-pip
+          - pip3 install -r requirements.txt --user
+          - cdk deploy --require-approval=never
+
+pipelines:
+  branches:
+    develop:
+      - step: *set-dev-env
+      - step:
+          <<: *deploy
+          name: Deploy to Dev
+          trigger: manual
+    staging:
+      - step: *set-test-env
+      - step:
+          <<: *deploy
+          name: Deploy to Test
+          trigger: manual
+    master:
+      - step: *set-prod-env
+      - step: 
+          <<: *deploy
+          name: Deploy to Prod
+          trigger: manual

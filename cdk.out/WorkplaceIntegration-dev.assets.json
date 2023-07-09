@@ -1,0 +1,32 @@
+{
+  "version": "16.0.0",
+  "files": {
+    "4e1bb0f82eee8e6fc09e692169a8a496d67c3f70dd15b50b15058dc1aebad9be": {
+      "source": {
+        "path": "asset.4e1bb0f82eee8e6fc09e692169a8a496d67c3f70dd15b50b15058dc1aebad9be",
+        "packaging": "zip"
+      },
+      "destinations": {
+        "current_account-current_region": {
+          "bucketName": "cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}",
+          "objectKey": "4e1bb0f82eee8e6fc09e692169a8a496d67c3f70dd15b50b15058dc1aebad9be.zip",
+          "assumeRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-file-publishing-role-${AWS::AccountId}-${AWS::Region}"
+        }
+      }
+    },
+    "56329fe79320900f22e57cc270cf3c832044c2f2e867acec434715488096b8bb": {
+      "source": {
+        "path": "WorkplaceIntegration-dev.template.json",
+        "packaging": "file"
+      },
+      "destinations": {
+        "current_account-current_region": {
+          "bucketName": "cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}",
+          "objectKey": "56329fe79320900f22e57cc270cf3c832044c2f2e867acec434715488096b8bb.json",
+          "assumeRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-file-publishing-role-${AWS::AccountId}-${AWS::Region}"
+        }
+      }
+    }
+  },
+  "dockerImages": {}
+}
