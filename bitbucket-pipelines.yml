@@ -17,11 +17,11 @@ definitions:
         name: Set Test Environment
         script:
           - echo ENV=test >> set_env.sh
-          - echo AWS_ACCESS_KEY_ID=${TEST_AWS_ACCESS_KEY_ID} >> set_env.sh
-          - echo AWS_SECRET_ACCESS_KEY=${TEST_AWS_SECRET_ACCESS_KEY} >> set_env.sh
-          - echo AWS_DEFAULT_REGION=${TEST_AWS_DEFAULT_REGION} >> set_env.sh
-          - echo CDK_ENVIRONMENT=test >> set_env.sh
-          - echo CDK_STACK_NAME="OpenSearchEtlStack-test" >> set_env.sh
+          - echo **********
+          - echo **********
+          - echo **********
+          - echo **********
+          - echo **********
         artifacts:
           - set_env.sh
 
