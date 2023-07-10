@@ -6,14 +6,13 @@ definitions:
         name: Set Dev Environment
         script:
           - echo ENV=dev >> set_env.sh
-          - echo AWS_ACCESS_KEY_ID=${DEV_AWS_ACCESS_KEY_ID} >> set_env.sh
-          - echo AWS_SECRET_ACCESS_KEY=${DEV_AWS_SECRET_ACCESS_KEY} >> set_env.sh
-          - echo AWS_DEFAULT_REGION=${DEV_AWS_DEFAULT_REGION} >> set_env.sh
-          - echo CDK_ENVIRONMENT=dev >> set_env.sh
-          - echo CDK_STACK_NAME="OpenSearchEtlStack-dev" >> set_env.sh
+          - echo **********
+          - echo **********
+          - echo **********
+          - echo **********
+          - echo **********
         artifacts:
-          - set_env.sh
-
+              **********
     - step: &set-test-env
         name: Set Test Environment
         script:
@@ -30,13 +29,13 @@ definitions:
         name: Set Prod Environment
         script:
           - echo ENV=prod >> set_env.sh
-          - echo AWS_ACCESS_KEY_ID=${PROD_AWS_ACCESS_KEY_ID} >> set_env.sh
-          - echo AWS_SECRET_ACCESS_KEY=${PROD_AWS_SECRET_ACCESS_KEY} >> set_env.sh
-          - echo AWS_DEFAULT_REGION=${PROD_AWS_DEFAULT_REGION} >> set_env.sh
-          - echo CDK_ENVIRONMENT=prod >> set_env.sh
-          - echo CDK_STACK_NAME="OpenSearchEtlStack-prod" >> set_env.sh
+          - echo **********
+          - echo **********
+          - echo **********
+          - echo **********
+          - echo **********
         artifacts:
-          - set_env.sh
+          - **********
 
     - step: &deploy
         script:
